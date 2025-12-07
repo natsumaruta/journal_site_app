@@ -5,6 +5,10 @@ use App\Models\Article;
 
 state(['articles' => fn() => Article::all()]);
 
+$create = function () {
+    return redirect()->route('articles.create');
+};
+
 ?>
 
 <div>
@@ -18,4 +22,5 @@ state(['articles' => fn() => Article::all()]);
             </li>
         @endforeach
     </ul>
+    <button wire:click="create">新規論文投稿</button>
 </div>
