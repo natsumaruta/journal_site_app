@@ -23,7 +23,8 @@ $destroy = function () {
 
 <div>
     <a href="{{ route('articles.index') }}" class="button-back">戻る</a>
-    <h1>{{ $article->title }}</h1>
+    <h1>論文詳細</h1>
+    <p>タイトル：{{ $article->title }}</p>
     <p>{!! nl2br(e($article->body)) !!}</p>
     <button wire:click="back">一覧へ戻る</button>
     <button wire:click="edit">編集する</button>
