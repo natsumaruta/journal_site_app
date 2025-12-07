@@ -16,7 +16,7 @@ $store = function () {
 ?>
 
 <div>
-    <a href="{{ route('articles.index') }}">戻る</a>
+    <a href="{{ route('articles.index') }}" class="button-back">戻る</a>
     <h1>新規登録</h1>
 
     <!-- wire:submit="store"でフォーム送信時にstore関数を呼び出し -->
@@ -32,6 +32,6 @@ $store = function () {
             <textarea wire:model="body" id="body"></textarea>
         </p>
 
-        <button type="submit">登録</button>
+        <button type="submit" class="button">登録</button>
     </form>
 </div>
