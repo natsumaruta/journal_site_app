@@ -22,7 +22,6 @@ $destroy = function () {
 ?>
 
 <div>
-    <a href="{{ route('articles.index') }}" class="button-back">戻る</a>
     <h1>論文詳細</h1>
     <p>タイトル：{{ $article->title }}</p>
     <p>{!! nl2br(e($article->body)) !!}</p>
