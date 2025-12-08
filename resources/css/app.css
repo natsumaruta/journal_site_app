@@ -9,3 +9,134 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* ----------------------------------------
+テキスト（p）
+---------------------------------------- */
+p {
+    line-height: 1.8;
+    margin: 1em 1.5em;
+}
+
+/* ----------------------------------------
+見出し（h1）
+---------------------------------------- */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 1.5rem;
+    /* 上を詰めて見やすく */
+}
+
+/* ----------------------------------------
+ラベル
+---------------------------------------- */
+label {
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+/* ----------------------------------------
+リスト（ul）
+---------------------------------------- */
+/* リスト（ul） */
+ul {
+    list-style: none;
+    padding-left: 1.5em;
+    line-height: 2.5;
+}
+
+/* hover 時に色変化 */
+ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: .3em .5em;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+ul li a:hover {
+    color: #2589d0;
+    background-color: #eef8ff;
+}
+
+/* ----------------------------------------
+ボタン（button）
+---------------------------------------- */
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    margin: 1em 1.5em;
+    padding: .7em 1.2em;
+    border: 1px solid #2589d0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2589d0;
+    font-size: 1em;
+    transition: 0.15s ease;
+    /* ← 追加：アニメーション */
+}
+
+/* ホバー時（カーソルを乗せたとき） */
+button:hover {
+    background-color: #2589d0;
+    color: #fff;
+}
+
+/* 押下時（クリック中） */
+button:active {
+    background-color: #1e6eaa;
+    color: #fff;
+    transform: translateY(2px);
+    /* 2px下に沈む！ */
+}
+
+/* ----------------------------------------
+入力欄（input）
+---------------------------------------- */
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    width: 50%;
+    margin-left: 1.5rem;
+}
+
+/* ----------------------------------------
+本文入力欄（textarea）
+---------------------------------------- */
+textarea {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    width: 50%;
+    min-height: 15rem;
+    margin-left: 1.5rem;
+}
+
+/* ----------------------------------------
+戻るボタン（a.button-back）
+※ 疑似要素 ::before を使って矢印を生成
+---------------------------------------- */
+.button-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    /* 文字と矢印の間隔 */
+    color: #2589d0;
+    text-decoration: none;
+    margin: 1rem 1.5rem;
+}
+
+.button-back::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #2589d0;
+    border-right: 2px solid #2589d0;
+    transform: rotate(-135deg);
+    /* ← 左向き矢印 */
+}
